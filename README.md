@@ -13,6 +13,6 @@ git remote add origin https://github.com/Asdex1240/ionic.git
 git push -u origin main
 
 Para hacer push en un repositorio existente:
-git remote add origin https://github.com/Asdex1240/Asdex1240.git
+git remote add origin https://github.com/Asdex1240/ionic.git
 git branch -M main
 git push -u origin main
