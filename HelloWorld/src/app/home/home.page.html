@@ -1,16 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header>
+  <ion-toolbar color="primary"> 
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/places"></ion-back-button>
+    </ion-buttons>
     <ion-title>
-      Hello World
+      Service con http
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Hello World</ion-title>
-    </ion-toolbar>
-  </ion-header>
-    <ion-text>My first App</ion-text>
+<ion-content>
+    <ion-list>
+      <ion-card *ngFor="let photo of photos">
+        <img [src]="photo.thumbnailUrl">
+        <ion-card-content>
+          <p>{{photo.title}}</p>
+          <p>{{photo.albumId}}</p>: <a [href]="photo.url" target="_blank">{{photo.url}}</a>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
 </ion-content>
